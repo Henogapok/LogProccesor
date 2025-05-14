@@ -1,0 +1,122 @@
+# Файл .gitignore для .NET проектов
+
+## Общие правила для всех IDE ##
+# Игнорирование пользовательских настроек IDE
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Игнорирование файлов IDE (JetBrains Rider, IntelliJ IDEA, WebStorm, etc.)
+.idea/
+*.iml
+modules.xml
+misc.xml
+workspace.xml
+tasks.xml
+usage.statistics.xml
+sonarlint/
+
+# Игнорирование файлов Visual Studio Code
+.vscode/
+
+# Игнорирование файлов Visual Studio
+.vs/
+# Игнорирование файлов Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+## Специфичные для .NET ##
+# Папки с результатами сборки
+[Bb]in/
+[Oo]bj/
+[Pp]ublish/
+
+# Пакеты NuGet
+# Обычно пакеты не добавляются в Git, так как они восстанавливаются из nuget.org или других источников
+# Однако, если вы используете локальный кэш пакетов в проекте, раскомментируйте следующую строку
+# packages/
+# Игнорирование папки .nuget локального кэша
+.nuget/
+
+# Файлы, генерируемые Entity Framework Core Migrations (если не хотите их коммитить)
+# Migrations/*.Designer.cs
+# Migrations/*.cs # Если вы хотите игнорировать все файлы миграций
+
+# Файлы конфигурации, специфичные для пользователя или окружения
+# (если вы не используете user secrets или переменные окружения для них)
+# appsettings.Development.json # Если содержит секреты
+# *.Secret.json
+# *.secrets.json
+
+# Файлы логов
+*.log
+logs/
+*.log.*
+
+# Временные файлы
+*.tmp
+*.temp
+*.swp
+*~
+
+# Файлы операционной системы
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+
+# Linux
+.Trash-*
+
+# Файлы, связанные с тестированием (если они генерируются локально и не нужны в репозитории)
+# TestResults/
+# *.coverage
+# *.coveragereport
+
+# Файлы Web.config/App.config трансформаций, если они содержат секреты
+# Web.Debug.config
+# Web.Release.config
+# App.Debug.config
+# App.Release.config
+# (Обычно базовые файлы трансформаций коммитятся, но не те, что содержат секреты для конкретных сборок)
+
+# Специфичные для Rider файлы (дополнительно к .idea)
+# Например, если есть какие-то специфичные файлы кэша или настроек Rider, не покрытые .idea/
+# Rider specific local files (если таковые есть и мешают)
+
+# Локальные файлы публикации (если используются)
+*.Publish.xml
+*.pubxml
+*.pubxml.user
+
+# Файлы Docker (если вы не хотите коммитить локальные Dockerfile или docker-compose.override.yml)
+# docker-compose.override.yml
+# Dockerfile.local
+
+# Файлы npm/yarn (если используется фронтенд в проекте)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json # Если вы предпочитаете не коммитить lock-файл (хотя обычно его коммитят)
+yarn.lock # Если вы предпочитаете не коммитить lock-файл (хотя обычно его коммитят)
+dist/
+.cache/
+
+# Дополнительные файлы, которые могут быть специфичны для вашего проекта
+# Например, если вы генерируете какие-то отчеты локально
+# reports/
+
+# Исключение для файла global.json, если он используется
+# (по умолчанию он не игнорируется, но если вдруг попал под общее правило)
+!global.json
